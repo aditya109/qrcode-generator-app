@@ -1,28 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="icon" type="image/png" href="assets/favicon.ico"/>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="index.css" />
+		<link rel="icon" type="image/ico" href="assets/favicon.ico" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="bg__image"></div>
 
-</head>
-<body>
-<section class="section">
-    <div class="container">
-        <h1 class="title">
-            Text to QR Code converter
-        </h1>
-        <p class="subtitle">
-            Please enter your <strong>text</strong> :
-        </p>
-    </div>
-    <div class="field">
-        <div class="control">
-            <textarea class="textarea" placeholder="Normal textarea"></textarea>
-        </div>
-    </div>
-</section>
-</body>
+		<div class="main__container">
+			<div class="heading__container">
+				<span>Text To QR Code Converter</span>
+			</div>
+			<div class="subtitle__container">
+				<p><span>Node JS Application for converting Text to QR Code</span></p>
+			</div>
+			<div class="input__container">
+				<div class="input__label__container">
+					<span class="textarea__label">
+						Place Your Text Here :
+					</span>
+				</div>
+				<div class="textarea__container">
+					<textarea
+						id="text"
+						class="textarea"
+						placeholder="👇 Text 👇"
+						name="text"
+						rows="15"
+						cols="90"
+					></textarea>
+				</div>
+				<div class="btn__container">
+					<button class="btn">Submit</button>
+				</div>
+			</div>
+			<div class="result__container">
+				<div class="result__left__container">
+					<div class="text__label__wrapper">
+						<span class="textarea__label">
+							Result QR Code <i class="far fa-hand-point-right"></i>
+						</span>
+					</div>
+					<div class="preview__wrapper">
+						<img src="assets/qrCode.png" alt="preview" class="preview" />
+					</div>
+				</div>
+				<div class="btn__container">
+					<button class="btn">Download</button>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

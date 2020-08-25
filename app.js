@@ -3,9 +3,12 @@ const path = require('path');
 const app = express();
 const router = express.Router();
 
+const message = "lorem ipsum";
+
+
 router.get('/', function (request, response) {
-    response.sendFile(path.join(__dirname + '/templates/index.html'))
-    console.log("Route ${"/"} is working ...")
+    // response.sendFile(path.join(__dirname + '/templates/index.html'))
+    // console.log("Route ${"/"} is working ...")
 })
 
 
