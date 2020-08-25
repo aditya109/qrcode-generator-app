@@ -1,12 +1,17 @@
 const express = require('express');
-const path = require('templates');
+const path = require('path');
 const app = express();
+const router = express.Router();
 
-app.get('/*', (request, response) => {
-    response.sendFile(path.join(__dirname, './index.html'));
+router.get('/', function (request, response) {
+    response.sendFile(path.join(__dirname + '/templates/index.html'))
+    console.log("Route ${"/"} is working ...")
 })
 
-const PORT = 8081;
-app.listen(PORT, () => {
+
+const PORT = 3000;
+
+app.use('/', router);
+app.listen(process.env.port || PORT, () => {
     console.log(`App running on ${PORT}`);
 })
