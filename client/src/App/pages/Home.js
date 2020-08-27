@@ -19,7 +19,7 @@ export default class Home extends Component {
         // const message = this.state.value;
         const message = this.state.value;
         if (this.state.value !== "") {
-            axios.post(`/text?message=${message}`)
+            axios.post(`/api/text?message=${message}`)
                 .then(response => {
                     this.setState({value: "", qrCode: response.data})
                 })
@@ -31,7 +31,7 @@ export default class Home extends Component {
 
     handleDownload() {
         if (this.state.qrCode !== "default") {
-            fetch(`/download/qrCode`).then(response => {
+            fetch(`/api/download/qrCode`).then(response => {
                 response.blob().then(blob => {
                     let url = window.URL.createObjectURL(blob);
                     let a = document.createElement("a");
