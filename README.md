@@ -2,6 +2,10 @@
 
 A simple NodeJS and ReactJS application which reads text and generates QR Code for it.
 
+##### Stack
+<code><img height="45" src="https://cdn.svgporn.com/logos/react.svg" /></code>
+<code><img height="45" src="https://cdn.svgporn.com/logos/nodejs-icon.svg" /></code>
+
 <br />
 <p align="center">
   <a href="https://enigmatic-shore-57208.herokuapp.com/">
