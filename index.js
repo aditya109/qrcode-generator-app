@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 async function convertToQRCode(message, response) {
 	const result = await qrcode.toDataURL(message);
+	!fs.existsSync(`./data/`) && fs.mkdirSync(`./data`, { recursive: true })
 	fs.writeFileSync("./data/qr.html", `<img src="${result}">`);
 	response.send(result);
 }
